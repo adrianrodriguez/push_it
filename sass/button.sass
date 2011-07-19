@@ -1,0 +1,49 @@
+@import "compass/css3"
+
+@mixin button
+  background: rgba(0, 0, 0, 1)
+  @include background-image(linear-gradient(top center, #484545, #2c2c2b))
+  @include border-radius(4px 4px 6px 6px)
+  border: 1px solid #282727
+  @include box-shadow(0px 0px 5px rgba(0,0,0,0))
+  border-bottom: 1px solid #383837
+  display: block
+  text-align: center
+  width: 100px
+  padding: 10px 20px 15px
+  color: #fff
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.55)
+  position: absolute
+  top: -2px
+  left: 0px
+  z-index: 2
+  font:
+    weight: bold
+    family: Helvetica, Arial, sans-serif
+    
+  &:hover
+    cursor: pointer
+    
+  &:active
+    top: 0px
+    
+@mixin button_underneath
+  background: #282727
+  border-radius: 5px
+  position: relative
+  width: 102px
+  padding: 10px 20px 20px
+  margin-top: 50px
+  z-index: 1
+  display: block
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.75)
+  
+.wrapper
+  width: 100px
+  margin: 200px auto
+
+  .button
+    @include button
+    
+  .button_underneath
+    @include button_underneath
