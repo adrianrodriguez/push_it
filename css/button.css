@@ -1,10 +1,85 @@
-/* line 41, ../sass/button.sass */
-.wrapper {
-  width: 100px;
-  margin: 200px auto;
+/* line 43, ../sass/button.sass */
+* {
+  margin: 0;
+  padding: 0;
 }
-/* line 45, ../sass/button.sass */
-.wrapper .button {
+
+/* line 47, ../sass/button.sass */
+body {
+  background-color: #8c8c8c;
+}
+
+/* line 50, ../sass/button.sass */
+.github {
+  font-size: 15px;
+  font-family: "Helvetica", Arial, sans-serif;
+  font-weight: normal;
+  color: white;
+  text-shadow: none;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.35)), color-stop(100%, rgba(0, 0, 0, 0.55)));
+  background-image: -webkit-linear-gradient(top center, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55));
+  background-image: -moz-linear-gradient(top center, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55));
+  background-image: -o-linear-gradient(top center, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55));
+  background-image: -ms-linear-gradient(top center, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55));
+  background-image: linear-gradient(top center, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55));
+  -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.45);
+  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.45);
+  -o-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.45);
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.45);
+  width: 255px;
+  text-align: center;
+  -moz-transform: rotate(-35deg);
+  -webkit-transform: rotate(-35deg);
+  -o-transform: rotate(-35deg);
+  -ms-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+  position: absolute;
+  top: 45px;
+  left: -30px;
+}
+/* line 67, ../sass/button.sass */
+.github a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  font-weight: bold;
+  padding: 5px 25px;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.9);
+}
+
+/* line 75, ../sass/button.sass */
+.wrapper {
+  width: 900px;
+  margin: 200px auto;
+  border-left: 5px dotted white;
+  padding: 0 35px 75px 35px;
+}
+/* line 81, ../sass/button.sass */
+.wrapper h1 {
+  font-family: "Lobster", cursive;
+  font-size: 70px;
+  color: #333333;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75);
+  margin-bottom: 0;
+}
+/* line 89, ../sass/button.sass */
+.wrapper h2 {
+  font-family: "Lobster", cursive;
+  font-size: 48px;
+  color: #333333;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75);
+  margin-bottom: 20px;
+}
+
+/* line 97, ../sass/button.sass */
+.button_wrapper {
+  width: 100px;
+  margin-right: 100px;
+  float: left;
+}
+
+/* line 102, ../sass/button.sass */
+.button {
   background: black;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #484545), color-stop(100%, #2c2c2b));
   background-image: -webkit-linear-gradient(top center, #484545, #2c2c2b);
@@ -35,25 +110,73 @@
   left: 0px;
   z-index: 2;
   font-weight: bold;
-  font-family: Helvetica, Arial, sans-serif;
-}
-/* line 24, ../sass/button.sass */
-.wrapper .button:hover {
-  cursor: pointer;
+  font-family: "Lobster", cursive;
+  font-size: 15px;
 }
 /* line 27, ../sass/button.sass */
-.wrapper .button:active {
+.button:hover {
+  cursor: pointer;
+}
+/* line 30, ../sass/button.sass */
+.button:active {
   top: 0px;
 }
-/* line 48, ../sass/button.sass */
-.wrapper .button_underneath {
+/* line 109, ../sass/button.sass */
+.button.blue {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0192f7), color-stop(100%, #0165ab));
+  background-image: -webkit-linear-gradient(top center, #0192f7, #0165ab);
+  background-image: -moz-linear-gradient(top center, #0192f7, #0165ab);
+  background-image: -o-linear-gradient(top center, #0192f7, #0165ab);
+  background-image: -ms-linear-gradient(top center, #0192f7, #0165ab);
+  background-image: linear-gradient(top center, #0192f7, #0165ab);
+  border: 1px solid #015691;
+}
+/* line 113, ../sass/button.sass */
+.button.orange {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7af01), color-stop(100%, #ab7901));
+  background-image: -webkit-linear-gradient(top center, #f7af01, #ab7901);
+  background-image: -moz-linear-gradient(top center, #f7af01, #ab7901);
+  background-image: -o-linear-gradient(top center, #f7af01, #ab7901);
+  background-image: -ms-linear-gradient(top center, #f7af01, #ab7901);
+  background-image: linear-gradient(top center, #f7af01, #ab7901);
+  border: 1px solid #916701;
+}
+/* line 117, ../sass/button.sass */
+.button.grey {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #d9d9d9));
+  background-image: -webkit-linear-gradient(top center, #ffffff, #d9d9d9);
+  background-image: -moz-linear-gradient(top center, #ffffff, #d9d9d9);
+  background-image: -o-linear-gradient(top center, #ffffff, #d9d9d9);
+  background-image: -ms-linear-gradient(top center, #ffffff, #d9d9d9);
+  background-image: linear-gradient(top center, #ffffff, #d9d9d9);
+  border: 1px solid #cccccc;
+  color: #666666;
+  text-shadow: 0px -1px 0px rgba(255, 255, 255, 0.9);
+}
+
+/* line 123, ../sass/button.sass */
+.button_underneath {
   background: #282727;
   border-radius: 5px;
   position: relative;
   width: 102px;
   padding: 10px 20px 20px;
-  margin-top: 50px;
   z-index: 1;
   display: block;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.75);
+  font-weight: bold;
+  font-family: "Lobster", cursive;
+  font-size: 15px;
+}
+/* line 130, ../sass/button.sass */
+.button_underneath.blue {
+  background: #015691;
+}
+/* line 133, ../sass/button.sass */
+.button_underneath.orange {
+  background: #916701;
+}
+/* line 136, ../sass/button.sass */
+.button_underneath.grey {
+  background: #bfbfbf;
 }

@@ -1,3 +1,8 @@
+
+// Author: Adrian Rodriguez
+// URL: http://adrian-rodriguez.net
+// Project: Push It, Pure CSS Push Buttons
+
 @import "compass/css3"
 
 @mixin button
@@ -17,9 +22,7 @@
   top: -2px
   left: 0px
   z-index: 2
-  font:
-    weight: bold
-    family: Helvetica, Arial, sans-serif
+
     
   &:hover
     cursor: pointer
@@ -33,17 +36,102 @@
   position: relative
   width: 102px
   padding: 10px 20px 20px
-  margin-top: 50px
   z-index: 1
   display: block
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.75)
-  
-.wrapper
-  width: 100px
-  margin: 200px auto
 
-  .button
-    @include button
+* 
+  margin: 0
+  padding: 0
+  
+body
+  background-color: lighten(#333, 35%)
+  
+.github  
+  font:
+    size: 15px
+    family: "Helvetica", Arial, sans-serif
+    weight: normal
+  color: #fff
+  text-shadow: none
+  //background: rgba(0,0,0,0.50)
+  @include background-image(linear-gradient(top center, rgba(0,0,0,0.35), rgba(0,0,0,0.55)))
+  @include box-shadow(inset 0px 1px 0px rgba(255,255,255,0.45))
+  width: 255px
+  text-align: center
+  @include rotate(-35deg)
+  position: absolute
+  top: 45px
+  left: -30px
+  
+  a
+    text-decoration: none
+    color: #fff
+    display: block
+    font-weight: bold
+    padding: 5px 25px
+    text-shadow: 0px 1px 0px rgba(0,0,0,0.90)
+       
+.wrapper
+  width: 900px
+  margin: 200px auto
+  border-left: 5px dotted #fff
+  padding: 0 35px 75px 35px
+
+  h1
+    font:
+      family: "Lobster", cursive
+      size: 70px
+    color: #333333
+    text-shadow: 0px 1px 1px rgba(255,255,255,0.75)
+    margin-bottom: 0
+      
+  h2
+    font:
+      family: "Lobster", cursive
+      size: 48px
+    color: #333333
+    text-shadow: 0px 1px 1px rgba(255,255,255,0.75)
+    margin-bottom: 20px
     
-  .button_underneath
-    @include button_underneath
+.button_wrapper
+  width: 100px
+  margin-right: 100px
+  float: left
+  
+.button
+  @include button
+  font:
+    weight: bold
+    family: "Lobster", cursive
+    size: 15px
+    
+  &.blue
+    @include background-image(linear-gradient(top center, #0192f7, darken(#0192f7, 15%)))
+    border: 1px solid darken(#0192f7, 20%)
+      
+  &.orange
+    @include background-image(linear-gradient(top center, #f7af01, darken(#f7af01, 15%)))
+    border: 1px solid darken(#f7af01, 20%)
+    
+  &.grey
+    @include background-image(linear-gradient(top center, #ffffff, darken(#ffffff, 15%)))
+    border: 1px solid darken(#ffffff, 20%)
+    color: lighten(#333333, 20%)
+    text-shadow: 0px -1px 0px rgba(255,255,255, .90)
+    
+.button_underneath
+  @include button_underneath
+  font:
+    weight: bold
+    family: "Lobster", cursive
+    size: 15px
+    
+  &.blue
+    background: darken(#0192f7, 20%)
+    
+  &.orange
+    background: darken(#f7af01, 20%)
+    
+  &.grey
+    background: darken(#ffffff, 25%)
