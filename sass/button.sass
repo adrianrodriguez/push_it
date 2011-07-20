@@ -5,7 +5,7 @@
 
 @import "compass/css3"
 
-@mixin button
+@mixin push_it
   background: rgba(0, 0, 0, 1)
   @include background-image(linear-gradient(top center, #484545, #2c2c2b))
   @include border-radius(4px 4px 6px 6px)
@@ -19,6 +19,7 @@
   color: #fff
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.55)
   position: absolute
+  // top positioning determines the amount of depth your button has
   top: -2px
   left: 0px
   z-index: 2
@@ -30,7 +31,7 @@
   &:active
     top: 0px
     
-@mixin button_underneath
+@mixin push_it_background
   background: #282727
   border-radius: 5px
   position: relative
@@ -54,7 +55,6 @@ body
     weight: normal
   color: #fff
   text-shadow: none
-  //background: rgba(0,0,0,0.50)
   @include background-image(linear-gradient(top center, rgba(0,0,0,0.35), rgba(0,0,0,0.55)))
   @include box-shadow(inset 0px 1px 0px rgba(255,255,255,0.45))
   width: 255px
@@ -99,12 +99,15 @@ body
   margin-right: 100px
   float: left
   
-.button
-  @include button
+.button, .button_underneath
+  // keep both the button and the bevel (button_underneath) the same size/weight/family to keep the size of each the same
   font:
     weight: bold
     family: "Lobster", cursive
     size: 15px
+    
+.button
+  @include push_it
     
   &.blue
     @include background-image(linear-gradient(top center, #0192f7, darken(#0192f7, 15%)))
@@ -121,11 +124,7 @@ body
     text-shadow: 0px -1px 0px rgba(255,255,255, .90)
     
 .button_underneath
-  @include button_underneath
-  font:
-    weight: bold
-    family: "Lobster", cursive
-    size: 15px
+  @include push_it_background
     
   &.blue
     background: darken(#0192f7, 20%)
