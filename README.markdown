@@ -2,6 +2,8 @@
 
 ## Check out what these pushovers look like: Demo
 
+[Push It has a github page!](http://adrianrodriguez.github.com)
+
 ![screenshot](http://dl.dropbox.com/u/349285/Screen%20shot%202011-07-19%20at%2010.22.10%20PM.png)
 
 ## How to use
